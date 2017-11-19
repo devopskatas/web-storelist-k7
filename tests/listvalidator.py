@@ -4,7 +4,7 @@ import sys
 
 masterList = [] 
 nextList = []
-with open(os.getcwd() + "./storelist.htm") as fp:
+with open("../storelist.htm") as fp:
     soup = BeautifulSoup(fp, "html.parser")
     
     
