@@ -1,10 +1,16 @@
 from bs4 import BeautifulSoup
-import os
+import os, os.path
 import sys
 
 masterList = [] 
 nextList = []
-with open("../storelist.htm") as fp:
+
+curfilePath = os.path.abspath(__file__)
+curDir = os.path.abspath(os.path.join(curfilePath, os.pardir))
+parentDir = os.path.abspath(os.path.join(curDir, os.pardir))
+print(parentDir)
+
+with open(parentDir + '/storelist.htm') as fp:
     soup = BeautifulSoup(fp, "html.parser")
     
     
